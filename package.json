@@ -1,0 +1,15 @@
+{
+  "name": "bot-adkar",
+  "version": "1.0.0",
+  "description": "Discord bot for daily morning/evening adhkar and Friday Surah Al-Kahf reminders.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2",
+    "luxon": "^3.7.2"
+  }
+}
