@@ -67,15 +67,15 @@ const commands = [
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
 ].map(command => command.toJSON());
 
-if (!process.env.DISCORD_TOKEN || !process.env.CLIENT_ID || !process.env.GUILD_ID) {
-  throw new Error("Missing DISCORD_TOKEN, CLIENT_ID or GUILD_ID in .env");
+if (!process.env.DISCORD_TOKEN || !process.env.CLIENT_ID) {
+  throw new Error("Missing DISCORD_TOKEN or CLIENT_ID in .env");
 }
 
 const rest = new REST({ version: "10" }).setToken(process.env.DISCORD_TOKEN);
 
 await rest.put(
-  Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
+  Routes.applicationCommands(process.env.CLIENT_ID),
   { body: commands }
 );
 
-console.log("✅ تم تسجيل أوامر Bot-adkar.");
+console.log("✅ تم تسجيل أوامر Bot-adkar عالميًا لجميع السيرفرات.");
