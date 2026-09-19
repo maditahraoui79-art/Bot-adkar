@@ -4,7 +4,7 @@
   "description": "Discord bot for daily morning/evening adhkar and Friday Surah Al-Kahf reminders.",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node deploy-commands.js && node src/index.js",
     "deploy": "node deploy-commands.js"
   },
   "dependencies": {
